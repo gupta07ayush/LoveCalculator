@@ -8,6 +8,7 @@ root.config(bg='#6e1423')
 
 
 def calculate():
+    ''' Get the value of text entry then calculate the love percentage by random module'''
     name = your_name_entry.get()
     partner = partner_name_entry.get()
     if name.lower() == 'prashant' and partner.lower() == 'ananya':
@@ -32,9 +33,10 @@ def calculate():
             result.config(text=f"{num}% Match!")
 
 
-heading = Label(root, text="Love Calculator", font=('Times new roman', 40, 'bold'),
-                bg="#161a1d", fg='#fdf0d5', border=3, relief='solid')
+heading = Label(root, text="Love Calculator", font=('Times new roman',
+                40, 'bold'), bg="#161a1d", fg='#fdf0d5', border=3, relief='solid')
 heading.place(x=20, y=20, height=100, width=460)
+
 
 your_name = Label(root, text="Enter Your Name", font=('Arial', 15),
                   bg="#6e1423", fg='black', )
