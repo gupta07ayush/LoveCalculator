@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, Entry, Button
+from tkinter import Tk, Label, Entry, Button, END
 import random
 
 root = Tk()
@@ -11,24 +11,24 @@ def calculate():
     name = your_name_entry.get()
     partner = partner_name_entry.get()
     if name.lower() == 'prashant' and partner.lower() == 'ananya':
-        result.config(text="98% Match !")
+        result.config(text="96% Match !")
 
     elif name.lower() == 'ayush' and partner.lower() == 'priyanshi':
         result.config(text="93% Match !")
 
     elif name.lower() == 'ashish' and partner.lower() == 'kriti':
-        result.config(text=" -19 %")
+        result.config(text=" -9999 %")
 
     elif name.lower() == 'aman' and partner.lower() == 'bharti':
-        result.config(text="You deserve better.")
+        result.config(text="Change Partner Name")
 
     else:
         if name == '' or partner == '':
             result.config(text="Error:Enter valid name")
         else:
             num = random.randint(50, 80)
-            your_name_entry.delete(first=0)
-            partner_name_entry.delete(first=0)
+            your_name_entry.delete(first=0, last=END)
+            partner_name_entry.delete(first=0, last=END)
             result.config(text=f"{num}% Match!")
 
 
