@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, Entry
+from tkinter import Tk, Label, Entry, Button
 
 root = Tk()
 root.geometry("500x670")
@@ -25,6 +25,10 @@ partner_name.place(x=20, y=350, height=30, width=460)
 partner_name_entry = Entry(root, text="", font=('Arial', 15),
                            bg="#6e1423", fg='#fdf0d5', border=10)
 partner_name_entry.place(x=70, y=380, height=50, width=360)
+
+calculate_button = Button(root, text="Result", font=('Arial', 15),
+                          bg="#6e1423", fg='#fdf0d5', )
+calculate_button.place(x=150, y=480, height=50, width=200)
 
 
 root.mainloop()
